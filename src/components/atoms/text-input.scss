@@ -1,0 +1,36 @@
+.input {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+  width: 100%;
+  
+  &__label {
+      color: var(--text-color);
+      font-size: 24px;
+      text-transform: lowercase;
+      margin-bottom: 1px;
+      display: flex;
+      align-items: flex-end;
+
+      &--optional {
+        color: var(--detail-color);
+        margin: 0;
+      }
+  }
+
+  &__textfield {
+      color: var(--accent-color);
+      background-color: var(--detail-color-opaque);
+      border-radius: 3px;
+      border: none;
+      height: 100%;
+      max-height: 45px;
+      max-width: 300px;
+      box-sizing: border-box;
+      padding: 10px 10px;
+      width: 100%;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      margin-left: 10px;
+  }
+}
