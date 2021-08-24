@@ -1,0 +1,32 @@
+.row-container {
+  list-style-type: none;
+  width: 100%;
+  max-width: 321px;
+  border-bottom: 1px solid var(--detail-color);
+  max-height: 70px;
+
+  &:last-child {
+    border: none;
+    padding-bottom: 1px;
+  }
+}
+
+.row {
+  display: flex;
+  height: 100%;
+  color: var(--text-color);
+  align-items: center;
+  
+  &__label {
+    font-weight: 400;
+    font-size: 18px;
+    margin: 1px 7px 1px 2px;
+  }
+
+  &__data {
+    margin: 1px 7px 1px 2px;
+    color: var(--accent-color);
+    font-weight: 200;
+    font-size: 13px;
+  }
+}

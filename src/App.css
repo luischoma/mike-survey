@@ -4,6 +4,7 @@
   --text-color: #6B6B6B;
   --secondary-color: #E5F3F5;
   --accent-color: #1A1B1D;
+  --detail-color-opaque: #E5F3F5;
 }
 
 body, html {
