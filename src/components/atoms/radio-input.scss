@@ -10,7 +10,7 @@
     height: 24px;
     width: 24px;
     background-color: var(--detail-color-opaque);
-    margin-right: 10px;
+    margin-right: 6px;
     cursor: pointer;
     border: none;
     border-radius: 12px;
@@ -32,6 +32,7 @@
 
   &__label {
     font-weight: 300;
-    color: var(--text-color)
+    color: var(--text-color);
+    font-size: 14px;
   }
 }
