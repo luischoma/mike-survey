@@ -3,6 +3,7 @@ import { PageDescription } from './page-description'
 import { PageTitle } from './page-title'
 import { TextInput } from './text-input'
 import { ListRow } from './list-row'
+import { Checkbox } from './checkbox'
 
 
 export {
@@ -10,5 +11,6 @@ export {
   PageDescription,
   PageTitle,
   TextInput,
-  ListRow
+  ListRow,
+  Checkbox,
 }
