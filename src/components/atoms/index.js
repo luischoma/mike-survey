@@ -4,6 +4,7 @@ import { PageTitle } from './page-title'
 import { TextInput } from './text-input'
 import { ListRow } from './list-row'
 import { Checkbox } from './checkbox'
+import { RadioInput } from './radio-input'
 
 
 export {
@@ -13,4 +14,5 @@ export {
   TextInput,
   ListRow,
   Checkbox,
+  RadioInput
 }

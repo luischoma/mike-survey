@@ -1,0 +1,37 @@
+.radio-input {
+  display: flex;
+  width: 100%;
+  align-items: center;
+
+  &__data {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 24px;
+    width: 24px;
+    background-color: var(--detail-color-opaque);
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+  
+    &--unchecked {
+      min-height: 15px;
+      min-width: 15px;
+      display: block;
+    }
+
+    &--checked  {
+      display: block;
+      min-height: 16px;
+      min-width: 16px;
+      border-radius: 8px;
+      background-color: var(--detail-color);
+    }
+  }
+
+  &__label {
+    font-weight: 300;
+    color: var(--text-color)
+  }
+}
