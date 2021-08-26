@@ -1,5 +1,19 @@
 .favorite-colors {
-  display: grid;
-  grid-template-columns: 80px 80px 80px 80px;
-  grid-template-rows: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 340px;
+
+  &__label {
+    font-weight: 300;
+    color: var(--text-color);
+    font-size: 24px;
+    margin-bottom: 1px;
+  }
+  &__options {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, 70px);
+    margin-left: 10px;
+  }
 }

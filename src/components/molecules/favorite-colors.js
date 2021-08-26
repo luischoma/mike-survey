@@ -26,15 +26,19 @@ export const FavoriteColors = () => {
 
   return (
     <div className="favorite-colors">
-      {
-        Object.keys(colors).map(color => {
-          return (
-            <Checkbox key={color}
-              label={color} isChecked={colors[color]}
-              onClick={() => handleInputChange(color)} />
-          )
-        })
-      }
+      <label className="favorite-colors__label">favorite colors:</label>
+      <div className="favorite-colors__options">
+
+        {
+          Object.keys(colors).map(color => {
+            return (
+              <Checkbox key={color}
+                label={color} isChecked={colors[color]}
+                onClick={() => handleInputChange(color)} />
+            )
+          })
+        }
+      </div>
     </div>
   )
 }
