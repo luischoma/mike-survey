@@ -15,15 +15,18 @@ export const GenderSelector = () => {
 
   return (
     <div className="gender-selector">
-      {
-        POSSIBLE_GENDERS.map(gender => {
-          return (
-            <RadioInput key={gender}
-              label={gender} isChecked={gender === genderState}
-              onClick={() => handleInputChange(gender)} />
-          )
-        })
-      }
+      <label className="gender-selector__label">gender:</label>
+      <div className="gender-selector__options">
+        {
+          POSSIBLE_GENDERS.map(gender => {
+            return (
+              <RadioInput key={gender}
+                label={gender} isChecked={gender === genderState}
+                onClick={() => handleInputChange(gender)} />
+            )
+          })
+        }
+      </div>
     </div>
   )
 }
