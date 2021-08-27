@@ -15,6 +15,10 @@ export const initialState = {
   1: {
     name: '',
     email: ''
+  },
+  2: {
+    gender: 'prefer not to respond',
+    age: '18'
   }
 }
 
@@ -33,7 +37,7 @@ export const Base = () => {
       </div>
 
       <div className="base__content">
-        {<Component state={state[step]} handleChange={([name, email]) => { setState({ ...state, [step]: { name, email } }) }}></Component>}
+        {<Component state={state[step]} handleChange={(params) => { setState({ ...state, [step]: { ...params } }) }}></Component>}
       </div>
 
       <div className="base__footer">
