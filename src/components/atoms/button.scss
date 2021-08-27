@@ -1,0 +1,39 @@
+.button {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  height: 100%;
+  max-height: 53px;
+  max-width: 205px;
+  font-weight: 300 !important;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: var(--text-color);
+  font-family: 'Roboto';
+  box-sizing: content-box;
+  
+  &--default {
+    background-color: var(--primary-color);
+  }
+
+  &--lightened {
+    background-color: rgba(255, 221, 201, 0.7);
+  }
+
+  &--deactivated {
+    cursor: default;
+    background-color: rgba(107, 107, 107, 0.3);
+  }
+
+  &--special {
+    background-color: var(--detail-color-opaque);
+  }
+
+  &:hover {
+    border-bottom: 1px solid var(--accent-color);
+  }
+}
+
+

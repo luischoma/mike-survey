@@ -6,6 +6,7 @@ import { ListRow } from './list-row'
 import { Checkbox } from './checkbox'
 import { RadioInput } from './radio-input'
 import { Header } from './header'
+import { Button } from './button'
 
 export {
   PageCounter,
@@ -15,5 +16,6 @@ export {
   ListRow,
   Checkbox,
   RadioInput,
-  Header
+  Header,
+  Button
 }
