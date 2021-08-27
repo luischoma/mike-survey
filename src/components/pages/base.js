@@ -37,7 +37,13 @@ export const Base = () => {
       </div>
 
       <div className="base__content">
-        {<Component state={state[step]} handleChange={(params) => { setState({ ...state, [step]: { ...params } }) }}></Component>}
+        {<Component
+          state={state[step]}
+          handleChange={(params) => { setState({ ...state, [step]: { ...params } }) }}
+          mainText={SURVEY_CONFIG[step].mainText}
+          helperText={SURVEY_CONFIG[step].helperText}
+          title={SURVEY_CONFIG[step].title}
+        />}
       </div>
 
       <div className="base__footer">

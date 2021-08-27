@@ -4,12 +4,11 @@ import PropTypes from 'prop-types'
 import { PageDescription, PageTitle, TextInput } from '../atoms'
 import { BaseInput } from '../molecules/base-input'
 
-export const StepOne = ({ state, handleChange }) => {
-
+export const StepOne = ({ state, handleChange, title, mainText, helperText }) => {
   return (
     <div>
-      <PageDescription description="we want to know you better!" descriptionHelper="this survey won't take more than 5 minutes." />
-      <PageTitle title="your identity" />
+      <PageDescription description={mainText} descriptionHelper={helperText} />
+      <PageTitle title={title} />
       <BaseInput>
         <TextInput
           textLabel="name"
@@ -33,5 +32,8 @@ export const StepOne = ({ state, handleChange }) => {
 
 StepOne.propTypes = {
   state: PropTypes.object,
-  handleChange: PropTypes.func
+  handleChange: PropTypes.func,
+  title: PropTypes.string,
+  mainText: PropTypes.string,
+  helperText: PropTypes.string
 }
