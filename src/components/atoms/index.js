@@ -7,6 +7,7 @@ import { Checkbox } from './checkbox'
 import { RadioInput } from './radio-input'
 import { Header } from './header'
 import { Button } from './button'
+import { Select } from './select'
 
 export {
   PageCounter,
@@ -17,5 +18,6 @@ export {
   Checkbox,
   RadioInput,
   Header,
-  Button
+  Button,
+  Select
 }
