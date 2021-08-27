@@ -19,7 +19,7 @@ export const Header = ({ lastPage, actualPage, handleClose }) => {
 }
 
 Header.propTypes = {
-  lastPage: PropTypes.string.isRequired,
-  actualPage: PropTypes.string.isRequired,
+  lastPage: PropTypes.number.isRequired,
+  actualPage: PropTypes.number.isRequired,
   handleClose: PropTypes.func.isRequired
 }
