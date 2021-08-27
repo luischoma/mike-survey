@@ -11,10 +11,20 @@ export const StepOne = ({ state, handleChange }) => {
       <PageDescription description="we want to know you better!" descriptionHelper="this survey won't take more than 5 minutes." />
       <PageTitle title="your identity" />
       <BaseInput>
-        <TextInput textLabel="name" optional value={state.name} handleChange={(event) => { handleChange([event.target.value, state.email]) }} />
+        <TextInput
+          textLabel="name"
+          optional value={state.name}
+          handleChange={(event) => {
+            handleChange({ name: event.target.value, email: state.email })
+          }} />
       </BaseInput>
       <BaseInput>
-        <TextInput textLabel="email" optional value={state.email} handleChange={(event) => { handleChange([state.name, event.target.value]) }} />
+        <TextInput
+          textLabel="email"
+          optional value={state.email}
+          handleChange={(event) => {
+            handleChange({ name: state.name, email: event.target.value })
+          }} />
       </BaseInput>
     </div>
   )
