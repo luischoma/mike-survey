@@ -1,4 +1,4 @@
-import { StepOne } from '../components/organisms'
+import { StepOne, StepTwo } from '../components/organisms'
 
 import { Button } from '../components/atoms'
 
@@ -11,6 +11,15 @@ export const SURVEY_CONFIG = {
     footer: [Button, Button],
     footerLabels: ['previous', 'next'],
     footerStatus: ['deactivated', 'default']
+  },
+  2: {
+    mainText: 'a little bit more about you!',
+    helperText: '3 more minutes to go',
+    title: 'your details',
+    component: StepTwo,
+    footer: [Button, Button],
+    footerLabels: ['previous', 'next'],
+    footerStatus: ['lightened', 'default']
   }
 }
 
