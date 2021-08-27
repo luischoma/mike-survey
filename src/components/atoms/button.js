@@ -17,5 +17,5 @@ export const Button = ({ buttonStatus = 'default', label, handleClick }) => {
 Button.propTypes = {
   label: PropTypes.string.isRequired,
   buttonStatus: PropTypes.oneOf(['default', 'lightened', 'deactivated', 'special']),
-  handleClick: PropTypes.func.isRequired
+  handleClick: PropTypes.func
 }

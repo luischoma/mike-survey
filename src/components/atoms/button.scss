@@ -12,7 +12,6 @@
   justify-content: space-around;
   color: var(--text-color);
   font-family: 'Roboto';
-  box-sizing: content-box;
   
   &--default {
     background-color: var(--primary-color);
@@ -23,8 +22,12 @@
   }
 
   &--deactivated {
-    cursor: default;
+    cursor: not-allowed;
     background-color: rgba(107, 107, 107, 0.3);
+
+    &:hover {
+      border-bottom: none !important;
+    }
   }
 
   &--special {
