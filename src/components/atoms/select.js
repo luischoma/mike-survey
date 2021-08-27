@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 
 import './select.scss'
 
-export const Select = ({ options, handleChange }) => {
+export const Select = ({ value, options, handleChange }) => {
   return (
     <div className="select-container">
-      <select onChange={handleChange} className="select">
+      <select value={value} onChange={handleChange} className="select">
         {
           options.map((option) => {
             return (
@@ -21,5 +21,6 @@ export const Select = ({ options, handleChange }) => {
 
 Select.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string),
-  handleChange: PropTypes.func.isRequired
+  handleChange: PropTypes.func.isRequired,
+  value: PropTypes.string
 }

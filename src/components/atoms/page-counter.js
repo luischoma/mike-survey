@@ -15,6 +15,6 @@ export const PageCounter = ({ actualPage, lastPage }) => {
 }
 
 PageCounter.propTypes = {
-  actualPage: PropTypes.string.isRequired,
-  lastPage: PropTypes.string,
+  actualPage: PropTypes.number.isRequired,
+  lastPage: PropTypes.number,
 }
