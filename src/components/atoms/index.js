@@ -8,6 +8,7 @@ import { RadioInput } from './radio-input'
 import { Header } from './header'
 import { Button } from './button'
 import { Select } from './select'
+import { Footer } from './footer'
 
 export {
   PageCounter,
@@ -19,5 +20,6 @@ export {
   RadioInput,
   Header,
   Button,
-  Select
+  Select,
+  Footer
 }
