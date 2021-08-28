@@ -11,6 +11,7 @@ export const StepTwo = ({ state, handleChange, title, mainText, helperText }) =>
       <PageTitle title={title} />
       <BaseInput>
         <Select
+          textLabel="age"
           value={state.age}
           options={Array.from(Array(65).keys())}
           handleChange={(event) => handleChange({ age: event.target.value, gender: state.gender })}

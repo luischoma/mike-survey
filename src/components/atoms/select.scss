@@ -3,6 +3,7 @@
   width: 100%;
   max-width: 90px;
   font-family: 'Roboto';
+  padding-left: 10px;
 
   .select {
     border: none;
@@ -25,4 +26,13 @@
     right: 10px;
     position: absolute;
   }
+}
+
+.label {
+  color: var(--text-color);
+  font-size: 24px;
+  text-transform: lowercase;
+  margin-bottom: 1px;
+  display: flex;
+  font-weight: 300;
 }
