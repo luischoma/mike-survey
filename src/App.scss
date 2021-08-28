@@ -14,6 +14,10 @@ body, html {
   height: 100%;
 }
 
+button {
+  font-family: 'Roboto', sans-serif;
+}
+
 .popup {
   position: absolute;
   height: 100%;
@@ -34,7 +38,7 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color:rgb(229, 243, 245, 0.4);
+  background-color:rgba(0, 56, 14, 0.4);
   animation: fadein 2s;
 }
 

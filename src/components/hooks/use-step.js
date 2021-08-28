@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { SURVEY_CONFIG } from '../../survey-config/survey-config';
+import { SURVEY_QUESTIONS } from '../../survey-config/survey-config';
 
 export const useStep = (() => {
   const [step, setStep] = useState(1)
@@ -10,7 +10,7 @@ export const useStep = (() => {
   }
 
   const onNextClick = () => {
-    const maxSteps = Object.keys(SURVEY_CONFIG).length
+    const maxSteps = Object.keys(SURVEY_QUESTIONS).length
 
     if (step < maxSteps) setStep(step + 1)
   }
@@ -20,7 +20,7 @@ export const useStep = (() => {
   }
 
   const nextClickCallback = () => {
-    if (step === Object.keys(SURVEY_CONFIG).length) return console.log('finished');
+    if (step === Object.keys(SURVEY_QUESTIONS).length) return console.log('finished');
 
     return onNextClick()
   }

@@ -7,71 +7,46 @@ import {
   Footer
 } from '../atoms'
 
-import { SURVEY_CONFIG } from '../../survey-config/survey-config';
+import { SURVEY_QUESTIONS, INITIAL_STATE } from '../../survey-config/survey-config';
 
 import { useStep } from '../hooks/use-step';
-
-export const initialState = {
-  1: {
-    name: '',
-    email: ''
-  },
-  2: {
-    gender: 'prefer not to respond',
-    age: '18'
-  },
-  3: {
-    book: '',
-    colors: {
-      yellow: false,
-      green: false,
-      black: false,
-      red: false,
-      pink: false,
-      blue: false,
-      orange: false,
-      white: false,
-    }
-  }
-}
 
 export const Base = () => {
   const { step, callbacks } = useStep()
 
-  const Component = SURVEY_CONFIG[step].component
+  const Component = SURVEY_QUESTIONS[step].component
 
-  const [state, setState] = useState(initialState)
+  const [state, setState] = useState(INITIAL_STATE)
 
   const isLastStep = () => {
-    return step === Object.keys(SURVEY_CONFIG).length
+    return step === Object.keys(SURVEY_QUESTIONS).length
   }
 
-  console.log('stateeeee >>> ', state)
   return (
     <div className="base">
       <div className="base__header">
-        <Header actualPage={step} lastPage={Object.keys(SURVEY_CONFIG).length} />
+        <Header actualPage={step} lastPage={Object.keys(SURVEY_QUESTIONS).length} />
       </div>
 
       <div className="base__content">
         {<Component
           state={isLastStep() ? state : state[step]}
           handleChange={(params) => { setState({ ...state, [step]: { ...params } }) }}
-          mainText={SURVEY_CONFIG[step].mainText}
-          helperText={SURVEY_CONFIG[step].helperText}
-          title={SURVEY_CONFIG[step].title}
+          mainText={SURVEY_QUESTIONS[step].mainText}
+          helperText={SURVEY_QUESTIONS[step].helperText}
+          title={SURVEY_QUESTIONS[step].title}
         />}
       </div>
 
       <div className="base__footer">
         <Footer>
-          {SURVEY_CONFIG[step].footer.map((Button, index) => {
+          {SURVEY_QUESTIONS[step].footer.map((Button, index) => {
             return (
               <Button
                 key={index}
                 handleClick={callbacks[index]}
-                label={SURVEY_CONFIG[step].footerLabels[index]}
-                buttonStatus={SURVEY_CONFIG[step].footerStatus[index]} />
+                label={SURVEY_QUESTIONS[step].footerLabels[index]}
+                buttonStatus={SURVEY_QUESTIONS[step].footerStatus[index]} />
             )
           })}
         </Footer>

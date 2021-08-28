@@ -2,7 +2,7 @@ import { StepOne, StepTwo, StepThree, StepFour } from '../components/organisms'
 
 import { Button } from '../components/atoms'
 
-export const SURVEY_CONFIG = {
+export const SURVEY_QUESTIONS = {
   1: {
     mainText: 'we want to know you better!',
     helperText: 'this survey won\'t take more than 5 minutes',
@@ -43,3 +43,26 @@ export const SURVEY_CONFIG = {
 
 
 
+export const INITIAL_STATE = {
+  1: {
+    name: '',
+    email: ''
+  },
+  2: {
+    gender: 'prefer not to respond',
+    age: '18'
+  },
+  3: {
+    book: '',
+    colors: {
+      yellow: false,
+      green: false,
+      black: false,
+      red: false,
+      pink: false,
+      blue: false,
+      orange: false,
+      white: false,
+    }
+  }
+}
