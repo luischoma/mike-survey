@@ -19,10 +19,11 @@ export const StepThree = ({ state, handleChange, title, mainText, helperText }) 
       </BaseInput>
       <BaseInput>
         <FavoriteColors
-          colors={state.colors}
+          value={state.colors}
           handleChange={(color) => handleChange(
             { book: state.book, colors: { ...state.colors, [color]: !state.colors[color] } }
-          )} />
+          )}
+        />
       </BaseInput>
     </div>
   )

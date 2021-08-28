@@ -5,19 +5,18 @@ import './favorite-colors.scss';
 
 import { Checkbox } from '../atoms';
 
-export const FavoriteColors = ({ colors, handleChange }) => {
+export const FavoriteColors = ({ value, handleChange }) => {
   return (
     <div className="favorite-colors">
       <label className="favorite-colors__label">favorite colors:</label>
       <div className="favorite-colors__options">
-
         {
-          Object.keys(colors).map(color => {
+          Object.keys(value).map(color => {
             return (
               <Checkbox
                 key={color}
                 label={color}
-                isChecked={colors[color]}
+                isChecked={value[color]}
                 onClick={() => handleChange(color)}
               />
             )
@@ -31,5 +30,5 @@ export const FavoriteColors = ({ colors, handleChange }) => {
 
 FavoriteColors.propTypes = {
   handleChange: PropTypes.func,
-  colors: PropTypes.object
+  value: PropTypes.object
 }
