@@ -1,4 +1,4 @@
-import { StepOne, StepTwo, StepThree } from '../components/organisms'
+import { StepOne, StepTwo, StepThree, StepFour } from '../components/organisms'
 
 import { Button } from '../components/atoms'
 
@@ -29,6 +29,15 @@ export const SURVEY_CONFIG = {
     footer: [Button, Button],
     footerLabels: ['previous', 'next'],
     footerStatus: ['lightened', 'default']
+  },
+  4: {
+    mainText: 'thank you for taking the survey!',
+    helperText: 'take a moment to review your data before finishing.',
+    title: 'your summary',
+    component: StepFour,
+    footer: [Button, Button],
+    footerLabels: ['previous', 'submit'],
+    footerStatus: ['lightened', 'special']
   }
 }
 

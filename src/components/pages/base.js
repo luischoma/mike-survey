@@ -42,6 +42,10 @@ export const Base = () => {
 
   const [state, setState] = useState(initialState)
 
+  const isLastStep = () => {
+    return step === Object.keys(SURVEY_CONFIG).length
+  }
+
   console.log('stateeeee >>> ', state)
   return (
     <div className="base">
@@ -51,7 +55,7 @@ export const Base = () => {
 
       <div className="base__content">
         {<Component
-          state={state[step]}
+          state={isLastStep() ? state : state[step]}
           handleChange={(params) => { setState({ ...state, [step]: { ...params } }) }}
           mainText={SURVEY_CONFIG[step].mainText}
           helperText={SURVEY_CONFIG[step].helperText}
