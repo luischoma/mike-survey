@@ -15,9 +15,10 @@
   display: flex;
   height: 100%;
   color: var(--text-color);
-  align-items: center;
+  align-items: center; 
   
   &__label {
+    padding-left: 10px;
     font-weight: 400;
     font-size: 18px;
     margin: 1px 7px 1px 2px;
