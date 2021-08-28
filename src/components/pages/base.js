@@ -19,6 +19,19 @@ export const initialState = {
   2: {
     gender: 'prefer not to respond',
     age: '18'
+  },
+  3: {
+    book: '',
+    colors: {
+      yellow: false,
+      green: false,
+      black: false,
+      red: false,
+      pink: false,
+      blue: false,
+      orange: false,
+      white: false,
+    }
   }
 }
 
