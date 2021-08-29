@@ -4,6 +4,8 @@ import PropTypes from 'prop-types'
 import { PageDescription, PageTitle, TextInput } from '../atoms'
 import { BaseInput } from '../molecules/base-input'
 
+import './step-one.scss'
+
 export const StepOne = ({ state, handleChange, title, mainText, helperText }) => {
   return (
     <div>
@@ -25,6 +27,8 @@ export const StepOne = ({ state, handleChange, title, mainText, helperText }) =>
             handleChange({ name: state.name, email: event.target.value })
           }} />
       </BaseInput>
+      <p className="optional-disclaimer">fields marked with <span className="optional-disclaimer__detail">*</span> are optional  </p>
+
     </div>
   )
 
