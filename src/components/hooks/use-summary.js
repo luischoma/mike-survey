@@ -1,4 +1,10 @@
-export const useSummary = () => {
+import { useState, useEffect } from 'react';
+
+export const useSummary = (state) => {
+  const [canSave, setCanSave] = useState(false)
+  useEffect(() => {
+    validateFields()
+  }, [state])
 
   const parseColors = (obj) => {
     const colors = obj.colors
@@ -22,5 +28,16 @@ export const useSummary = () => {
     return parsedSummary
   }
 
-  return parseSummary
+  const validateFields = () => {
+    const parsedSummary = parseSummary(state)
+    const mandatoryFields = Object.keys(parsedSummary).filter((field) => field !== 'name' && field !== 'email')
+
+    const canSave = mandatoryFields.map((field) => parsedSummary[field]).every(value => Boolean(value))
+
+    canSave ? setCanSave(true) : setCanSave(false)
+  }
+
+
+
+  return { parseSummary, canSave }
 }

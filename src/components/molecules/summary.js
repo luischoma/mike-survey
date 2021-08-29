@@ -12,19 +12,22 @@ import './summary.scss'
 export const Summary = ({ state = {} }) => {
   let parsedSummary = {}
 
-  const parseSummary = useSummary()
+  const { parseSummary, canSave } = useSummary(state)
   if (state) { parsedSummary = parseSummary(state) }
 
   return (
-    <ul className="summary">
-      {
-        Object.keys(parsedSummary).map(item => {
-          return (
-            <ListRow key={item} label={item} data={parsedSummary[item]} />
-          )
-        })
-      }
-    </ul>
+    <>
+      <ul className="summary">
+        {
+          Object.keys(parsedSummary).map(item => {
+            return (
+              <ListRow key={item} label={item} data={parsedSummary[item]} />
+            )
+          })
+        }
+      </ul>
+      {!canSave && <p className="disclaimer"> please, complete all required fields. </p>}
+    </>
   )
 }
 
