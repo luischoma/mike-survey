@@ -1,7 +1,13 @@
-export const loadItem = (key) => {
-    return localStorage.getItem(key)
+const LOCAL_STORAGE_KEY = 'mike-survey'
+
+export const loadLocalStorage = () => {
+  return JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
 }
 
-export const setItem = (key, value) => {
-    return localStorage.setItem(key, value)
+export const setLocalStorage = (data) => {
+  const existingData = loadLocalStorage()
+
+  existingData ?
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify({ ...existingData, ...data })) :
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(data))
 }

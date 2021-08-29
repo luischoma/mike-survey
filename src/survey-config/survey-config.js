@@ -41,8 +41,6 @@ export const SURVEY_QUESTIONS = {
   }
 }
 
-
-
 export const INITIAL_STATE = {
   1: {
     name: '',

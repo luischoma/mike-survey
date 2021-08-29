@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 
 import './base.scss';
 
@@ -11,7 +12,7 @@ import { SURVEY_QUESTIONS, INITIAL_STATE } from '../../survey-config/survey-conf
 
 import { useStep } from '../hooks/use-step';
 
-export const Base = () => {
+export const Base = ({ handleClose }) => {
   const { step, callbacks } = useStep()
 
   const Component = SURVEY_QUESTIONS[step].component
@@ -25,7 +26,7 @@ export const Base = () => {
   return (
     <div className="base">
       <div className="base__header">
-        <Header actualPage={step} lastPage={Object.keys(SURVEY_QUESTIONS).length} />
+        <Header handleClose={handleClose} actualPage={step} lastPage={Object.keys(SURVEY_QUESTIONS).length} />
       </div>
 
       <div className="base__content">
@@ -53,4 +54,8 @@ export const Base = () => {
       </div>
     </div >
   )
+}
+
+Base.propTypes = {
+  handleClose: PropTypes.func
 }

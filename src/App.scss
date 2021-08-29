@@ -26,10 +26,12 @@ button {
   max-width: 384px;
   background-color: white;
   border: 1px solid var(--accent-color);
+  z-index: 100;
+
 }
 
 .popup-container {
-  z-index: 100;
+  z-index: 90;
   width: 100vw;
   height: 100vh;
   position: absolute;
