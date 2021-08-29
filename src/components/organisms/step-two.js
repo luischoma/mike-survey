@@ -4,10 +4,14 @@ import PropTypes from 'prop-types'
 import { PageDescription, PageTitle, Select } from '../atoms'
 import { BaseInput, GenderSelector } from '../molecules/'
 
+import './steps.scss'
+
 export const StepTwo = ({ state, handleChange, title, mainText, helperText }) => {
   return (
     <div>
-      <PageDescription description={mainText} descriptionHelper={helperText} />
+      <div className="step__description" >
+        <PageDescription description={mainText} descriptionHelper={helperText} />
+      </div>
       <PageTitle title={title} />
       <BaseInput>
         <Select

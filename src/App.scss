@@ -27,7 +27,18 @@ button {
   background-color: white;
   border: 1px solid var(--accent-color);
   z-index: 100;
+}
 
+@media (max-height: 529px) {
+  .popup {
+    height: 438px;
+  }
+}
+
+@media (max-height: 414px) {
+  .popup {
+    height: 390px;
+  }
 }
 
 .popup-container {

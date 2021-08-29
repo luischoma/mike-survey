@@ -8,3 +8,12 @@
     color: var(--detail-color)
   }
 }
+
+@media (max-height: 529px) {
+  .step {
+    &__description {
+      display: none;
+    }
+  }
+}
+

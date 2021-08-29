@@ -24,4 +24,20 @@
       margin-top: 50px;
       height: 67px;
   }
+
+  @media (max-height: 414px) {
+    .base {
+      &__content {
+        height: 279px;
+      }
+      &__input {
+        margin-top: 0px;
+      }
+
+      &__footer {
+        margin-top: 0px;
+        height: 38px;
+      }
+    }
+  }
 }

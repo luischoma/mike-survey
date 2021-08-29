@@ -37,7 +37,5 @@ export const useSummary = (state) => {
     canSave ? setCanSave(true) : setCanSave(false)
   }
 
-
-
   return { parseSummary, canSave }
 }
