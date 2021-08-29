@@ -23,7 +23,7 @@ export const Select = ({ textLabel, value, options, handleChange }) => {
 }
 
 Select.propTypes = {
-  options: PropTypes.arrayOf(PropTypes.string),
+  options: PropTypes.arrayOf(PropTypes.number),
   handleChange: PropTypes.func.isRequired,
   value: PropTypes.string,
   textLabel: PropTypes.string

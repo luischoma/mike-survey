@@ -16,6 +16,6 @@ export const ListRow = ({ label, data }) => {
 
 ListRow.propTypes = {
   label: PropTypes.string.isRequired,
-  data: PropTypes.string.isRequired,
+  data: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
   isLast: PropTypes.bool
 }
