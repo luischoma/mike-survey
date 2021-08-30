@@ -16,7 +16,7 @@ describe('When Button is rendered', () => {
     it('adds class to button', () => {
       const component = render(<Button buttonStatus='lightened' />)
 
-      expect(component.getElementsByClassName('button--lightened'.length)).toBe(1)
+      expect(component.getElementsByClassName('button--lightened').length).toBe(1)
 
     })
   })

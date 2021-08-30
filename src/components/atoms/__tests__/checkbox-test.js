@@ -27,7 +27,7 @@ describe('When Checkbox is rendered', () => {
     it('has unchecked style', () => {
       const component = render(<Checkbox label="test" onClick={onClick} />)
 
-      expect(component.getElementsByClassName('checkbox__data--unchecked'.length)).toBe(1)
+      expect(component.getElementsByClassName('checkbox__data--unchecked').length).toBe(1)
     })
   })
 
@@ -35,7 +35,7 @@ describe('When Checkbox is rendered', () => {
     it('has checked style', () => {
       const component = render(<Checkbox label="test" onClick={onClick} isChecked />)
 
-      expect(component.getElementsByClassName('checkbox__data--checked'.length)).toBe(1)
+      expect(component.getElementsByClassName('checkbox__data--checked').length).toBe(1)
     })
   })
 
