@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import './base.scss';
 
@@ -30,6 +30,11 @@ export const Base = () => {
 
   const Component = SURVEY_QUESTIONS[step].component
 
+  useEffect(() => {
+    window.addEventListener('beforeunload', () => {
+      handleLeave()
+    })
+  })
 
   const isLastStep = () => {
     return step === Object.keys(SURVEY_QUESTIONS).length
@@ -45,14 +50,14 @@ export const Base = () => {
     onClose()
   }
 
-  const handleClickOutsideContainer = () => {
-    setLocalStorage({ step: step, ...state })
+  const handleLeave = () => {
+    setLocalStorage({ ...state, step: step })
     setPopupActive(false)
   }
 
   return (
     popupActive &&
-    <div onClick={() => handleClickOutsideContainer()} className="popup-container">
+    <div onClick={() => handleLeave()} className="popup-container">
       <div onClick={(e) => e.stopPropagation()} className="popup">
         <div className="base">
           <div className="base__header">
