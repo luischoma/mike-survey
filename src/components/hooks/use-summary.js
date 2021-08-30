@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 export const useSummary = (state) => {
   const [canSave, setCanSave] = useState(false)
+
   useEffect(() => {
     validateFields()
   }, [state])

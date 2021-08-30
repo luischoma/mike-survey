@@ -1,3 +1,47 @@
+
+.popup {
+  position: absolute;
+  height: 100%;
+  max-height: 507px;
+  width: 100%;
+  max-width: 384px;
+  background-color: white;
+  border: 1px solid var(--accent-color);
+  z-index: 100;
+}
+
+@media (max-height: 529px) {
+  .popup {
+    height: 438px;
+  }
+}
+
+@media (max-height: 414px) {
+  .popup {
+    height: 390px;
+  }
+}
+
+.popup-container {
+  z-index: 90;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color:rgba(0, 56, 14, 0.4);
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+
 .base {
   max-width: 384px;
   max-height: 457px;
