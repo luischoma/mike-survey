@@ -26,7 +26,7 @@ export const Summary = ({ state = {} }) => {
           })
         }
       </ul>
-      {!canSave && <p className="disclaimer"> please, complete all required fields. </p>}
+      {!canSave && <p className="disclaimer"> in order to submit, please, complete all required fields. </p>}
     </>
   )
 }
