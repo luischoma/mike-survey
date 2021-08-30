@@ -2,6 +2,32 @@ import { StepOne, StepTwo, StepThree, StepFour } from '../components/organisms'
 
 import { Button } from '../components/atoms'
 
+import { loadLocalStorage } from '../services/local-storage/local-storage'
+
+export const EMPTY_STATE = {
+  1: {
+    name: '',
+    email: ''
+  },
+  2: {
+    gender: 'prefer not to respond',
+    age: '18'
+  },
+  3: {
+    book: '',
+    colors: {
+      yellow: false,
+      green: false,
+      black: false,
+      red: false,
+      pink: false,
+      blue: false,
+      orange: false,
+      white: false,
+    }
+  }
+}
+
 export const SURVEY_QUESTIONS = {
   1: {
     mainText: 'we want to know you better!',
@@ -41,26 +67,8 @@ export const SURVEY_QUESTIONS = {
   }
 }
 
-export const INITIAL_STATE = {
-  1: {
-    name: '',
-    email: ''
-  },
-  2: {
-    gender: 'prefer not to respond',
-    age: '18'
-  },
-  3: {
-    book: '',
-    colors: {
-      yellow: false,
-      green: false,
-      black: false,
-      red: false,
-      pink: false,
-      blue: false,
-      orange: false,
-      white: false,
-    }
-  }
+export const initialState = () => {
+  const existingState = loadLocalStorage()
+
+  return existingState ? { ...EMPTY_STATE, ...existingState } : EMPTY_STATE
 }
